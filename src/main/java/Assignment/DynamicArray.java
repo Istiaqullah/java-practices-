@@ -18,9 +18,6 @@ public class DynamicArray<T> implements Iterable<T> {
     public DynamicArray(int initCapacity) {
         //constructor
         // The initial capacity of the storage should be initCapacity
-        // Throw IllegalArgumentException if initCapacity < 1
-        // Use this _exact_ error message for the exception
-        // (quotes are not part of the message):
         //    "Capacity cannot be zero or negative."
         if (initCapacity < 1) {
             throw new IllegalArgumentException("Capacity cannot be zero or negative.");
@@ -30,28 +27,16 @@ public class DynamicArray<T> implements Iterable<T> {
     }
     public int size() {
         // Report the current number of elements.
-        // O(1)
         return size;
     }
-
     public int capacity() {
         // Report the max number of elements before expansion.
-        // O(1)
         return storage.length;
     }
 
     public T set(int index, T value) {
         // Change the item at the given index to be the given value.
         // Return the old item at that index.
-        // Note: You cannot add new items with this method.
-
-        // O(1)
-
-        // For an invalid index, throw an IndexOutOfBoundsException
-        // Use this code to produce the correct error message for
-        // the exception (do not use a different message):
-        //	  "Index " + index + " out of bounds!"
-
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index " + index + " out of bounds!");
         }
@@ -62,9 +47,6 @@ public class DynamicArray<T> implements Iterable<T> {
 
     public T get(int index) {
         // Return the item at the given index
-        // O(1)
-        // Use the exception (and error message) described in set()
-        // for invalid indicies.
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index " + index + " out of bounds!");
         }
@@ -83,8 +65,6 @@ public class DynamicArray<T> implements Iterable<T> {
     public boolean add(T value) {
         // Append an element to the end of the list and return true.
         // Double the capacity if no space available.
-        // Amortized O(1)
-        // nulls ARE accepted as valid values and are treated normally
         if (size == storage.length) {
             T[] newsto = (T[]) new Object[storage.length * 2];
             System.arraycopy(storage, 0, newsto, 0, storage.length);
@@ -99,13 +79,6 @@ public class DynamicArray<T> implements Iterable<T> {
     public void add(int index, T value) {
         // Insert the given value at the given index. Shift elements if needed,
         // double capacity if no space available, throw an exception if you cannot
-        // insert at the given index. You _can_ append items with this method.
-        // For the exception, use the same exception and message as set() and
-        // get()... however remember that the condition of the exception is
-        // different (different indexes are invalid).
-        // O(N) where N is the number of elements currently in the list
-        // nulls ARE accepted as valid values and are treated normally
-
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("Index " + index + " out of bounds!");
         }
@@ -128,11 +101,6 @@ public class DynamicArray<T> implements Iterable<T> {
 
         // Halve capacity of the storage if the number of elements falls
         // below 1/3 of the capacity.
-        // USE INTEGER DIVISION
-        // see main() testing for example of expected shrinking behavior
-
-        // O(N) where N is the number of elements currently in the list
-
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index " + index + " out of bounds!");
         }
@@ -149,42 +117,19 @@ public class DynamicArray<T> implements Iterable<T> {
     }
 
     public Iterator<T> iterator() {
-        // Uses an anonymous class style, complete the iterator code
-        // below. Note that this uses the "diamond syntax" which is
-        // only available for nested classes from Java 9 forward.
-        // If you get an error on the next line you can add a <T>
-        // betwen the <> or you can (and should) update your
-        // version of the JDK.
-
-
         return new Iterator<>() {
-            //instance variables here
-            //only _required_ methods are outlined below
-            //the interface also has some optional methods
-            //you may implement if you find them helpful
-
             private int currentIndex = 0;
             public T next() {
-                //your code here
                 return storage[currentIndex++];
             }
-
             public boolean hasNext() {
-                //your code here
                 return currentIndex < size;
             }
         };
     }
 
-    //******************************************************
-    //*******     BELOW THIS LINE IS TESTING CODE    *******
-    //*******      Edit it as much as you'd like!    *******
-    //******************************************************
-
     public String toString() {
-        //This method is provided for debugging purposes
-        //(use/modify as much as you'd like), it just prints
-        //out the list ifor easy viewing.
+        //This method is provided for debugging purposes for testing
         StringBuilder s = new StringBuilder("Dynamic array with " + size()
                 + " items and a capacity of " + capacity() + ":");
         for (int i = 0; i < size(); i++) {
@@ -193,8 +138,6 @@ public class DynamicArray<T> implements Iterable<T> {
         return s.toString();
 
     }
-
-    //JavaDoc note: How do you document a main? See Simulation.java for an example
     public static void main(String args[]){
         //These are _sample_ tests. If you're seeing all the "yays" that's
         //an excellend first step! But it might not mean your code is 100%
@@ -225,9 +168,6 @@ public class DynamicArray<T> implements Iterable<T> {
                 && ida.size() == 2 && ida.capacity() == 4 ){
             System.out.println("Yay 4");
         }
-
-        //Uncomment this after doing the iterator for testing
-
         System.out.print("Printing values: ");
         for(Integer i : ida) {
             System.out.print(i);
