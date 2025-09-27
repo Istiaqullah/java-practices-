@@ -1,0 +1,2 @@
+Design a functional calculator application that can perform basic arithmetic operations
+such as addition, subtraction, multiplication, and division. use javaFx for the user interface.
