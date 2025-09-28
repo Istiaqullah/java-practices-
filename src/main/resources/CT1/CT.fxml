@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="379.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CT1.Controller">
+    <children>
+        <TextField fx:id="textField" layoutX="28.0" layoutY="68.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="74.0" prefWidth="324.0">
+            <font>
+                <Font size="30.0" />
+            </font></TextField>
+        <Button layoutX="36.0" layoutY="212.0" mnemonicParsing="false" onAction="#b1" style="-fx-cursor: hand;" text="1">
+            <font>
+                <Font size="30.0" />
+            </font></Button>
+        <Button layoutX="117.0" layoutY="212.0" mnemonicParsing="false" onAction="#b2" style="-fx-cursor: hand;" text="2">
+            <font>
+                <Font size="30.0" />
+            </font></Button>
+        <Button layoutX="199.0" layoutY="212.0" mnemonicParsing="false" onAction="#b3" style="-fx-cursor: hand;" text="3">
+            <font>
+                <Font size="30.0" />
+            </font></Button>
+        <Button layoutX="294.0" layoutY="212.0" mnemonicParsing="false" onAction="#add" text="+">
+            <font>
+                <Font size="30.0" />
+            </font></Button>
+        <Button layoutX="36.0" layoutY="294.0" mnemonicParsing="false" onAction="#b4" style="-fx-cursor: hand;" text="4">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button layoutX="117.0" layoutY="294.0" mnemonicParsing="false" onAction="#b5" style="-fx-cursor: hand;" text="5">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button layoutX="199.0" layoutY="294.0" mnemonicParsing="false" onAction="#b6" style="-fx-cursor: hand;" text="6">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button layoutX="294.0" layoutY="294.0" mnemonicParsing="false" onAction="#minus" prefHeight="65.0" prefWidth="61.0" text="-" textAlignment="CENTER">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button layoutX="40.0" layoutY="378.0" mnemonicParsing="false" onAction="#b7" style="-fx-cursor: hand;" text="7">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button layoutX="121.0" layoutY="378.0" mnemonicParsing="false" onAction="#b8" style="-fx-cursor: hand;" text="8">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button layoutX="203.0" layoutY="378.0" mnemonicParsing="false" onAction="#b9" style="-fx-cursor: hand;" text="9">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button layoutX="294.0" layoutY="378.0" mnemonicParsing="false" onAction="#div" prefHeight="65.0" prefWidth="61.0" text="/">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button layoutX="40.0" layoutY="460.0" mnemonicParsing="false" onAction="#b0" style="-fx-cursor: hand;" text="0">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button layoutX="121.0" layoutY="460.0" mnemonicParsing="false" onAction="#calculate" style="-fx-cursor: hand;" text="=">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button layoutX="203.0" layoutY="460.0" mnemonicParsing="false" onAction="#clearTextField" style="-fx-cursor: hand;" text="C">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button layoutX="294.0" layoutY="460.0" mnemonicParsing="false" onAction="#multi" prefHeight="65.0" prefWidth="59.0" text="*" textAlignment="CENTER">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
