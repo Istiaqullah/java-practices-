@@ -15,4 +15,7 @@ module CT1 {
 
     opens CT1 to javafx.fxml;
     exports CT1;
+
+    opens TicTecToe to javafx.fxml;
+    exports TicTecToe;
 }
